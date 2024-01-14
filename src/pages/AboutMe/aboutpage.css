@@ -1,0 +1,13 @@
+.about-wrapper h3 {
+    font-size: 22px;
+    margin: 10px;
+}
+
+.about-wrapper button {
+    border: none;
+    margin: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+}

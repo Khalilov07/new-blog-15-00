@@ -1,0 +1,16 @@
+.course-wrapper {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapper .button {
+    border: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 20px 50px;
+    background: #FFF;
+    border-radius: 8px;
+    border: 1px solid black;
+}

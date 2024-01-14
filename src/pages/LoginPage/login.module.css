@@ -1,0 +1,13 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper form {
+    width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f2f2f2;
+}

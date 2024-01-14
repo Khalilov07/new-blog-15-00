@@ -1,0 +1,37 @@
+.course {
+    gap: 70px;
+    width: 30%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    color: white;
+    position: relative;
+    border-radius: 8px;
+    background: blue;
+    flex-direction: column;
+}
+
+.course span {
+    color: yellow;
+}
+
+.course__buttons {
+    display: flex;
+    column-gap: 20px;
+}
+
+.statusRound {
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.green {
+    background: rgb(11, 129, 11);
+}
+
+.gray {
+    background: rgba(128, 128, 128, 0.8);
+}

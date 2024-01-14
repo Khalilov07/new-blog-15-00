@@ -1,0 +1,24 @@
+{
+  "courses": [
+    {
+      "title": "Hello",
+      "duration": 0,
+      "id": 1,
+      "important": false
+    }
+  ],
+  "users": [
+    {
+      "email": "hello@mail.ru",
+      "password": "$2a$10$PGSS1knL29ic93xKpBvl4eGDUe0IT/KhFdXsL9w5rQ32cxvWcPcBe",
+      "id": 1
+    },
+    {
+      "email": "AzhabAir@mail.ru",
+      "password": "$2a$10$SxYHoZ2K18GqXPicZp61VOaEvumzkmL0FfrLsbM8dYQdLpx8m0wNe",
+      "name": "AZHAB",
+      "status": "admin",
+      "id": 2
+    }
+  ]
+}
