@@ -31,7 +31,7 @@ const App = () => {
 
       {/* Routes - позволяет создать коллекцию маршрутов */}
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage user={user} />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} /> 
         <Route path="/create" element={<CreatePost />} /> 

@@ -4,7 +4,7 @@ import styles from "./courseitem.module.css";
 
 import { Button } from "@mui/material";
 
-const CourseItem = ({ course, deletePost, changeImportant }) => {
+const CourseItem = ({ course, deletePost, changeImportant, user }) => {
   return (
     <div className={styles.course}>
       <div className={`${styles.statusRound} ${course.important === true ? styles.green : styles.gray}`}></div>
@@ -15,6 +15,7 @@ const CourseItem = ({ course, deletePost, changeImportant }) => {
         <h3>
           Продолжительность курса: <span>{course.duration}</span>
         </h3>
+
       </div>
       <div className={styles.course__buttons}>
         <Button variant="contained" color="error" onClick={() => deletePost()}>DELETE</Button>

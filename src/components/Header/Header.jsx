@@ -1,10 +1,8 @@
 import React from "react";
 
-import styles from './header.module.css' // styles - это некий объект с классами
+import styles from "./header.module.css"; // styles - это некий объект с классами
 
 import { Link } from "react-router-dom";
-
-
 
 const Header = ({ user }) => {
 
@@ -17,15 +15,26 @@ const Header = ({ user }) => {
   // <a> - запрашивает новый HTML файл и этот тег не умеет работать с jsx
 
   return (
+    
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About me</Link>
-        <Link to='/contact'>Contact</Link>
-        <Link to='/create'>Create Post</Link>
-        <Link to='/register'>Register</Link>
-        <Link to='/login'>Login</Link>
-        <Link>{user.name}</Link>
+        {user.status === "admin" ? (
+          <>
+            <button onClick={() => user = {}}>exit</button>
+            <Link to="/">Home</Link>
+            <Link to="/about">About me</Link>
+            <Link to="/create">Create Post</Link>
+            <Link>{user.name}</Link>
+          </>
+        ) : (
+          <>
+            <Link to="/">Home</Link>
+            <Link to="/about">About me</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </>
+        )}
       </nav>
     </header>
   );
