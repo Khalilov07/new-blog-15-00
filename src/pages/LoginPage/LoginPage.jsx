@@ -5,11 +5,17 @@ import { Button } from "@mui/material";
 import styles from "./login.module.css";
 import axios from "axios";
 import Header from "../../components/Header/Header";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser } from "../../store/userSlice";
 
-const LoginPage = ({ changeUserState }) => {
+const LoginPage = () => {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.user.user)
 
+  console.log(user);
 
   const postUser = (e) => {
     e.preventDefault();
@@ -20,10 +26,9 @@ const LoginPage = ({ changeUserState }) => {
     };
 
     axios.post(`http://localhost:3001/login`, user).then((res) => {
-      alert("вы успешно вошли в аккаунт");
       setEmail("");
       setPassword("");
-      changeUserState(res.data.user)
+      dispatch(addUser(res.data.user))
     });
 
     // сделайте уведомление после регистрации, snackBar

@@ -15,28 +15,20 @@ import { useState } from "react";
 
 const App = () => {
 
-  const [user, setUser] = useState({})
-
-  const changeUserState = (data) => {
-    setUser(data)
-  }
-
-  console.log(user)
-
   return (
     <div className="App">
       
-      <Header user={user} /> 
+      <Header /> 
       {/* header - должен быть на всех страницах  */}
 
       {/* Routes - позволяет создать коллекцию маршрутов */}
       <Routes>
-        <Route path="/" element={<HomePage user={user} />} />
+        <Route path="/" element={<HomePage  />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} /> 
         <Route path="/create" element={<CreatePost />} /> 
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage changeUserState={changeUserState} />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
     </div>

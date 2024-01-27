@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./aboutpage.css";
+import { useSelector } from "react-redux";
 
 const AboutPage = () => {
   // useState - помогает создать некое состояние которое можно изменить изменить с течением
@@ -57,6 +58,8 @@ const AboutPage = () => {
     setLikes(0);
   };
 
+  const user = useSelector(state => state.user.user)
+
   // Почитать как добавить что-то в конец массив
   // создать состояние которое будет содержать массив с строками: L, R
   // при нажатии на кнопку LEFT, добавлять к концу массива букву L,
@@ -65,6 +68,8 @@ const AboutPage = () => {
   return (
     <div className="about-wrapper">
       <h1>About Page</h1>
+
+      <h2>{user.name}</h2>
 
       <h3>{likes}</h3>
 
